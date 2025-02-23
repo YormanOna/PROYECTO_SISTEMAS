@@ -1,0 +1,56 @@
+.procesos-page {
+  padding: 2rem;
+  width: 170vh;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-section h1 {
+  font-size: 1.8rem;
+  color: #1e293b;
+}
+
+.tabla-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.tabla-procesos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-procesos th {
+  background: #4a90e2;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tabla-procesos th:hover {
+  background: #357abd;
+}
+
+.tabla-procesos td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-procesos tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.tabla-procesos tr:hover {
+  background: #f1f5f9;
+}

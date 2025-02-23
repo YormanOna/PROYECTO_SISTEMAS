@@ -1,0 +1,44 @@
+/* El ancho se adapta entre 200px y 300px, según el ancho del viewport */
+.sidebar {
+  width: clamp(200px, 20vw, 300px);
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(236, 240, 241, 0.2);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #bdc3c7;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(236, 240, 241, 0.2);
+  color: #ecf0f1;
+  transform: translateX(5px);
+}

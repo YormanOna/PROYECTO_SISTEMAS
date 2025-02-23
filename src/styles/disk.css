@@ -1,0 +1,235 @@
+:root {
+  --color-primario: #4a90e2;
+  --color-secundario: #50e3c2;
+  --color-terciario: #f5a623;
+  --texto-oscuro: #2c3e50;
+  --texto-claro: #6c757d;
+  --fondo: #f8fafc;
+  --card-bg: #ffffff;
+}
+
+.dark-mode {
+  --color-primario: #357abd;
+  --color-secundario: #40c2a1;
+  --color-terciario: #f5a623;
+  --texto-oscuro: #f8f9fa;
+  --texto-claro: #d3d3d3;
+  --fondo: #1c1c1c;
+  --card-bg: #2c3e50;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--fondo);
+  color: var(--texto-oscuro);
+}
+
+.disco-page {
+  padding: 2rem;
+  width: 170vh;
+  background: var(--fondo);
+  min-height: 100vh;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.floating-pdf-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  z-index: 1000;
+}
+
+.floating-pdf-button:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+.header-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+}
+
+.header-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mode-toggle-btn {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.mode-toggle-btn:hover {
+  background: #357abd;
+}
+
+.graph-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.graph-controls label {
+  font-size: 0.9rem;
+  color: var(--texto-oscuro);
+}
+
+.graph-controls input[type="color"] {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.metricas-principales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tarjeta-metrica {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-metrica:hover {
+  transform: translateY(-5px);
+}
+
+.icono-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icono-metrica {
+  font-size: 2rem;
+  color: var(--color-primario);
+}
+
+.tarjeta-metrica h3 {
+  margin: 0;
+  color: var(--texto-oscuro);
+}
+
+.valor-metrica {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--texto-oscuro);
+  text-align: center;
+}
+
+.graficos-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.grafico-principal {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.grafico-principal h3 {
+  margin-bottom: 1rem;
+  color: var(--texto-oscuro);
+}
+
+.estadisticas-avanzadas {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+}
+
+.estadisticas-avanzadas h3 {
+  margin-bottom: 1.5rem;
+  color: var(--texto-oscuro);
+}
+
+.particion {
+  margin-bottom: 1.5rem;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.particion-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--texto-oscuro);
+}
+
+.particion-bar {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.particion-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.particion-details {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--texto-claro);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos personalizados para las barras */
+.recharts-bar-rectangle {
+  transition: all 0.3s ease;
+}
+
+.recharts-bar-rectangle:hover {
+  filter: brightness(110%);
+}

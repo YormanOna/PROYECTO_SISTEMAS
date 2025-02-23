@@ -1,0 +1,78 @@
+:root {
+    --primary: #4a90e2;
+    --secondary: #50e3c2;
+    --background: #f5f6fa;
+    --text-primary: #2c3e50;
+    --sidebar-width: 250px;
+  }
+  
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui;
+  background: var(--background);
+  color: var(--text-primary);
+  
+}
+  
+  .app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+    transition: margin 0.3s ease;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: none; /* Ocultar navbar en desktop */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .app-container {
+      flex-direction: column;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  
+    .navbar {
+      display: flex; /* Mostrar navbar en móvil */
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+  
+    .sidebar {
+      display: none; /* Ocultar sidebar en móvil */
+    }
+  }
+  
+  /* Estilos comunes para todas las páginas */
+  .page-header {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    font-size: 2rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }

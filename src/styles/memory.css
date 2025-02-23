@@ -1,0 +1,283 @@
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #4a90e2;
+  --color-terciario: #50e3c2;
+  --texto-oscuro: #2c3e50;
+  --texto-claro: #6c757d;
+  --fondo: #f8fafc;
+  --card-bg: #ffffff;
+}
+
+.dark-mode {
+  --color-primario: #357abd;
+  --color-secundario: #40c2a1;
+  --color-terciario: #50e3c2;
+  --texto-oscuro: #f8f9fa;
+  --texto-claro: #d3d3d3;
+  --fondo: #1c1c1c;
+  --card-bg: #2c3e50;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--fondo);
+  color: var(--texto-oscuro);
+}
+
+/* Contenedor principal */
+.memoria-page {
+  padding: 2rem;
+  width: 170vh;
+  background: var(--fondo);
+  min-height: 100vh;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Botón flotante para PDF */
+.floating-pdf-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  z-index: 1000;
+}
+
+.floating-pdf-button:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+/* Cabecera */
+.header-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--texto-oscuro);
+}
+
+.header-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mode-toggle-btn {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.mode-toggle-btn:hover {
+  background: #357abd;
+}
+
+.graph-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.graph-controls label {
+  font-size: 0.9rem;
+  color: var(--texto-oscuro);
+}
+
+.graph-controls input[type="color"] {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+/* Métricas principales */
+.metricas-principales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tarjeta-metrica {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-metrica:hover {
+  transform: translateY(-5px);
+}
+
+.icono-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icono-metrica {
+  font-size: 2rem;
+  color: var(--color-secundario);
+}
+
+.tarjeta-metrica h3 {
+  margin: 0;
+  color: var(--texto-oscuro);
+}
+
+.valor-metrica {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--texto-oscuro);
+  text-align: center;
+}
+
+.sub-metrica {
+  text-align: center;
+  color: var(--texto-claro);
+  margin-top: 0.5rem;
+}
+
+/* Contenedor de gráficos */
+.graficos-container {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Gráfico principal (Área) */
+.grafico-principal {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.grafico-principal h3 {
+  margin-bottom: 1rem;
+  color: var(--texto-oscuro);
+}
+
+/* Gráficos secundarios */
+.graficos-secundarios {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.grafico-secundario {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.grafico-secundario h3 {
+  margin: 0;
+  color: var(--texto-oscuro);
+  font-size: 1.4rem;
+}
+
+/* Toggle de tipo de gráfico */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chart-type-toggle button {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.chart-type-toggle button.active,
+.chart-type-toggle button:hover {
+  background: #357abd;
+}
+
+/* Estadísticas avanzadas */
+.estadisticas-avanzadas {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.estadisticas-avanzadas h3 {
+  margin-bottom: 1.5rem;
+  color: var(--texto-oscuro);
+}
+
+.estadistica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--fondo);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.estadistica span {
+  color: var(--texto-claro);
+}
+
+.estadistica strong {
+  color: var(--texto-oscuro);
+  font-size: 1.1rem;
+}
+
+/* Estilos para tooltips de Recharts */
+.recharts-tooltip {
+  background: var(--color-primario) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.recharts-tooltip-label {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.recharts-default-tooltip {
+  padding: 1rem !important;
+}

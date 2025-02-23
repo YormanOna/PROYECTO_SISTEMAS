@@ -1,0 +1,240 @@
+:root {
+  --color-primario: #4a90e2;
+  --color-secundario: #50e3c2;
+  --danger: #ff6b6b;
+  --dark: #2c3e50;
+  --light: #f8fafc;
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --card-bg: #ffffff;
+}
+
+.dark-mode {
+  --color-primario: #357abd;
+  --color-secundario: #40c2a1;
+  --danger: #ff6b6b;
+  --dark: #f8f9fa;
+  --light: #2c3e50;
+  --text-primary: #f8f9fa;
+  --text-secondary: #d3d3d3;
+  --card-bg: #2c3e50;
+  --background: #1c1c1c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  color: var(--text-primary);
+}
+
+.red-page {
+  padding: 2rem;
+  width: 170vh;
+  background: var(--light);
+  min-height: 100vh;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.red-page.dark-mode {
+  background: var(--background);
+}
+
+.floating-pdf-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  z-index: 1000;
+}
+
+.floating-pdf-button:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+.header-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.header-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mode-toggle-btn {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.mode-toggle-btn:hover {
+  background: #357abd;
+}
+
+.graph-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.graph-controls label {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.graph-controls input[type="color"] {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.metricas-principales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tarjeta-metrica {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-metrica:hover {
+  transform: translateY(-5px);
+}
+
+.icono-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icono-metrica {
+  font-size: 2rem;
+  color: var(--color-primario);
+}
+
+.tarjeta-metrica h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.valor-metrica {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.sub-metrica {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.graficos-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.grafico-principal {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.grafico-principal h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.estadisticas-avanzadas {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+}
+
+.estadisticas-avanzadas h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.estadistica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--light);
+  border-radius: 8px;
+}
+
+.estadistica span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.estadistica strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Tooltips for Recharts */
+.recharts-tooltip {
+  background: var(--color-primario) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.recharts-tooltip-label {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.recharts-default-tooltip {
+  padding: 1rem !important;
+}

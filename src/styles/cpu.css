@@ -1,0 +1,277 @@
+:root {
+  --primary: #4a90e2;
+  --secondary: #50e3c2;
+  --danger: #ff6b6b;
+  --dark: #2c3e50;
+  --light: #f8f9fa; /* Fondo claro de tarjetas */
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --background: #f8fafc;
+  --card-bg: var(--light);
+}
+
+.dark-mode {
+  --primary: #357abd;
+  --secondary: #40c2a1;
+  --danger: #ff6b6b;
+  --dark: #000000;
+  --light: #2c3e50; /* Fondo oscuro para tarjetas */
+  --text-primary: #f8f9fa;
+  --text-secondary: #d3d3d3;
+  --background: #1c1c1c;
+  --card-bg: var(--light); /* En modo oscuro, las tarjetas usan el valor de --light (oscuro) */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+/* Contenedor principal */
+.cpu-page {
+  padding: 2rem;
+  width: 170vh;
+  background: var(--background);
+  min-height: 100vh;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Botón flotante para PDF */
+.floating-pdf-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  z-index: 1000;
+}
+
+.floating-pdf-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Cabecera */
+.header-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.header-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mode-toggle-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.mode-toggle-btn:hover {
+  background: #357abd;
+}
+
+.graph-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.graph-controls label {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.graph-controls input[type="color"] {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+/* Métricas principales */
+.metricas-principales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tarjeta-metrica {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-metrica:hover {
+  transform: translateY(-5px);
+}
+
+.icono-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icono-metrica {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.tarjeta-metrica h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.valor-metrica {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Contenedor de gráficos */
+.graficos-container {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Gráfico principal (Área) */
+.grafico-principal {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.grafico-principal h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Gráficos secundarios */
+.graficos-secundarios {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.grafico-secundario {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.grafico-secundario h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+}
+
+/* Toggle de tipo de gráfico */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chart-type-toggle button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.chart-type-toggle button.active,
+.chart-type-toggle button:hover {
+  background: #357abd;
+}
+
+/* Estadísticas avanzadas */
+.estadisticas-avanzadas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.estadistica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+}
+
+.estadistica span {
+  color: var(--text-secondary);
+}
+
+.estadistica strong {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+/* Tooltips para Recharts */
+.recharts-tooltip {
+  background: var(--primary) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+.recharts-tooltip-label {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.recharts-default-tooltip {
+  padding: 1rem !important;
+}
