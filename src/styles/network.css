@@ -30,7 +30,7 @@ body {
 
 .red-page {
   padding: 2rem;
-  width: 170vh;
+  width: auto;
   background: var(--light);
   min-height: 100vh;
   position: relative;

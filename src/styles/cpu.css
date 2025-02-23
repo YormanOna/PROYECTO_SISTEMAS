@@ -32,7 +32,7 @@ body {
 /* Contenedor principal */
 .cpu-page {
   padding: 2rem;
-  width: 170vh;
+  width: auto;
   background: var(--background);
   min-height: 100vh;
   position: relative;

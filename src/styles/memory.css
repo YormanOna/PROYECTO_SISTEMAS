@@ -28,7 +28,7 @@ body {
 /* Contenedor principal */
 .memoria-page {
   padding: 2rem;
-  width: 170vh;
+  width: auto;
   background: var(--fondo);
   min-height: 100vh;
   position: relative;

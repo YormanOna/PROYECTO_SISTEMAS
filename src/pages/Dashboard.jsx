@@ -123,7 +123,7 @@ const Dashboard = () => {
     cpuData.usage && cpuData.usage > 80 ? "#ff6b6b" : customGraphColor;
 
   return (
-    <div id="cpu-page" className="cpu-page">
+    <div id="cpu-page" className="dash-page">
       <div
         id="dashboard-container"
         className={`dashboard-container ${darkMode ? "dark-mode" : ""}`}

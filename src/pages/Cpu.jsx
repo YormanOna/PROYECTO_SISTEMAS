@@ -142,15 +142,7 @@ const CpuPage = () => {
               </>
             )}
           </button>
-          <div className="graph-controls">
-            <label htmlFor="graphColor">Color de Gráficas:</label>
-            <input
-              type="color"
-              id="graphColor"
-              value={customGraphColor}
-              onChange={(e) => setCustomGraphColor(e.target.value)}
-            />
-          </div>
+
         </div>
       </div>
 
@@ -181,6 +173,15 @@ const CpuPage = () => {
           <h3>
             <FontAwesomeIcon icon={faChartLine} /> Historial de Uso
           </h3>
+          <div className="graph-controls">
+            <label htmlFor="graphColor">Color de Gráficas:</label>
+            <input
+              type="color"
+              id="graphColor"
+              value={customGraphColor}
+              onChange={(e) => setCustomGraphColor(e.target.value)}
+            />
+          </div>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={history}>
               <defs>

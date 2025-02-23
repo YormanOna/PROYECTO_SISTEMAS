@@ -27,8 +27,7 @@ body {
   color: var(--text-primary);
 }
 
-.cpu-page {
-  padding: 2rem;
+.dash-page {
   width: auto;
   min-height: 100vh;
   position: relative;
