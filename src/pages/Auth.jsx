@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 import "../styles/auth.css";
 
 const Auth = () => {
@@ -26,7 +27,7 @@ const Auth = () => {
     const endpoint = isLogin ? "/login" : "/register";
     try {
       const response = await fetch(
-        `https://7332-177-53-215-61.ngrok-free.app${endpoint}`,
+        `https://ef97-177-53-215-61.ngrok-free.app${endpoint}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -38,6 +39,8 @@ const Auth = () => {
         setError(data.detail || "Error en la autenticación");
         return;
       }
+      console.log("Nombre recibido:", data.name);
+      localStorage.setItem("username", data.name || "Usuario");
       navigate("/app/dashboard");
     } catch (err) {
       setError("Error de conexión");
@@ -45,7 +48,10 @@ const Auth = () => {
   };
 
   const onGoogleSuccess = (response) => {
-    console.log("Login Exitoso:", response);
+    const userInfo = jwtDecode(response.credential); // Decodificamos el token JWT
+    console.log("Login Exitoso:", userInfo);
+    const username = userInfo.name; // El nombre completo del usuario
+    localStorage.setItem("username", username); // Guardamos el nombre en localStorage
     navigate("/app/dashboard");
   };
 

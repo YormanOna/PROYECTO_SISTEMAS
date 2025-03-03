@@ -1,6 +1,6 @@
 export const connectWebSocket = (endpoint, onMessage) => {
     let isActive = true;
-    const ws = new WebSocket(`wss://9f26-177-53-215-61.ngrok-free.app/ws/${endpoint}`);
+    const ws = new WebSocket(`wss://ef97-177-53-215-61.ngrok-free.app/ws/${endpoint}`);
   
     const handleMessage = (event) => {
       if (!isActive) return;

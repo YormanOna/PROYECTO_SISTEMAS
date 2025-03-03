@@ -1,4 +1,4 @@
-/* El ancho se adapta entre 200px y 300px, según el ancho del viewport */
+/* Estilo principal de la sidebar */
 .sidebar {
   width: clamp(200px, 20vw, 300px);
   background: linear-gradient(135deg, #2c3e50, #34495e);
@@ -9,17 +9,20 @@
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
 }
 
+/* Cabecera de la sidebar */
 .sidebar-header {
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Puedes reducirlo más si deseas */
   font-weight: bold;
   text-align: center;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(236, 240, 241, 0.2);
 }
 
+/* Estilo para los enlaces de navegación */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -37,8 +40,25 @@
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
+/* Cambiar el tamaño de la fuente en las opciones de la barra lateral */
+.sidebar-link span {
+  font-size: 0.875rem; /* Tamaño más pequeño para el texto de las opciones */
+}
+
 .sidebar-link:hover {
   background: rgba(236, 240, 241, 0.2);
   color: #ecf0f1;
   transform: translateX(5px);
+}
+
+/* Estilo del pie de página */
+.sidebar-footer {
+  padding: 0.3rem;
+  border-top: 1px solid #3e5c76; /* Línea separadora */
+}
+
+.sidebar-footer p {
+  margin: 0;
+  font-size: 0.875rem; /* Tamaño más pequeño en el pie de página */
+  color: #f8f9fa;
 }

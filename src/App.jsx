@@ -8,6 +8,7 @@ import Network from './pages/Network';
 import Processes from './pages/Processes';
 import Disk from './pages/Disk';
 import Auth from './pages/Auth';
+import ReportPage from './pages/ReportPage';
 import './styles/main.css';
 
 function Layout() {
@@ -24,6 +25,7 @@ function Layout() {
             <Route path="network" element={<Network />} />
             <Route path="processes" element={<Processes />} />
             <Route path="disk" element={<Disk />} />
+            <Route path="report" element={<ReportPage />} />
           </Routes>
         </div>
       </div>

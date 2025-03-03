@@ -64,7 +64,7 @@ body {
 }
 
 /* Cabecera */
-.header-section {
+/*.header-section {
   margin-bottom: 2rem;
   padding: 1.5rem;
   background: var(--card-bg);
@@ -82,9 +82,7 @@ body {
 .header-controls {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  gap: 8px;
 }
 
 .mode-toggle-btn {
@@ -96,7 +94,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
   font-size: 0.9rem;
-}
+}*/
 
 .mode-toggle-btn:hover {
   background: #357abd;

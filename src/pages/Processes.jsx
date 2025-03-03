@@ -46,21 +46,25 @@ const ProcessTable = ({ processes }) => (
     <table className="tabla-procesos">
       <thead>
         <tr>
+          <th>USER</th>
           <th>PID</th>
-          <th>Nombre</th>
-          <th>Estado</th>
-          <th>CPU %</th>
-          <th>Memoria %</th>
+          <th>%CPU</th>
+          <th>%MEM</th>
+          <th>START</th>
+          <th>TIME</th>
+          <th>COMMAND</th>
         </tr>
       </thead>
       <tbody>
         {processes.map(proc => (
-          <tr key={proc.pid}>
-            <td>{proc.pid}</td>
-            <td>{proc.name}</td>
-            <td>{proc.status}</td>
-            <td>{proc.cpu.toFixed(1)}</td>
-            <td>{proc.memory.toFixed(1)}</td>
+          <tr key={proc.PID}>
+            <td>{proc.USER}</td>
+            <td>{proc.PID}</td>
+            <td>{proc['%CPU'].toFixed(1)}</td>
+            <td>{proc['%MEM'].toFixed(1)}</td>
+            <td>{proc.START}</td>
+            <td>{proc.TIME}</td>
+            <td>{proc.COMMAND}</td>
           </tr>
         ))}
       </tbody>

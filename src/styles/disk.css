@@ -58,7 +58,7 @@ body {
   transform: translateY(-2px);
 }
 
-.header-section {
+/*.header-section {
   margin-bottom: 2rem;
   padding: 1.5rem;
   background: var(--card-bg);
@@ -90,7 +90,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
   font-size: 0.9rem;
-}
+}*/
 
 .mode-toggle-btn:hover {
   background: #357abd;

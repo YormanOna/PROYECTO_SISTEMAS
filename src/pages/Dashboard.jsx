@@ -145,7 +145,7 @@ const Dashboard = () => {
 
         <div className="metrics-grid">
           {/* Tarjeta de CPU */}
-          <div className="metric-card cpu-card">
+          <div className="metric-card">
             <div className="card-header">
               <FontAwesomeIcon icon={faMicrochip} className="card-icon" />
               <h3>Procesador</h3>

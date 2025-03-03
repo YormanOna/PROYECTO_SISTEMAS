@@ -5,7 +5,7 @@
   min-height: 100vh;
 }
 
-.header-section {
+/*.header-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,19 +15,20 @@
 .header-section h1 {
   font-size: 1.8rem;
   color: #1e293b;
-}
+}*/
 
 .tabla-container {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  overflow-x: auto;
+  overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es muy ancha */
   padding: 1rem;
 }
 
 .tabla-procesos {
   width: 100%;
   border-collapse: collapse;
+  table-layout: auto; /* Ajusta automáticamente el ancho de las columnas */
 }
 
 .tabla-procesos th {
@@ -36,6 +37,8 @@
   padding: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-align: left; /* Alineación a la izquierda para mejor legibilidad */
+  white-space: nowrap; /* Evita que los encabezados se dividan en varias líneas */
 }
 
 .tabla-procesos th:hover {
@@ -45,6 +48,44 @@
 .tabla-procesos td {
   padding: 1rem;
   border-bottom: 1px solid #e2e8f0;
+  vertical-align: top; /* Alinea el texto en la parte superior */
+}
+
+/* Ajustar el ancho de columnas específicas */
+.tabla-procesos th:nth-child(1), /* USER */
+.tabla-procesos td:nth-child(1) {
+  min-width: 100px;
+}
+
+.tabla-procesos th:nth-child(2), /* PID */
+.tabla-procesos td:nth-child(2) {
+  min-width: 80px;
+}
+
+.tabla-procesos th:nth-child(3), /* %CPU */
+.tabla-procesos td:nth-child(3) {
+  min-width: 80px;
+}
+
+.tabla-procesos th:nth-child(4), /* %MEM */
+.tabla-procesos td:nth-child(4) {
+  min-width: 80px;
+}
+
+.tabla-procesos th:nth-child(5), /* START */
+.tabla-procesos td:nth-child(5) {
+  min-width: 100px;
+}
+
+.tabla-procesos th:nth-child(6), /* TIME */
+.tabla-procesos td:nth-child(6) {
+  min-width: 100px;
+}
+
+.tabla-procesos th:nth-child(7), /* COMMAND */
+.tabla-procesos td:nth-child(7) {
+  min-width: 300px; /* Más ancho para COMMAND */
+  word-break: break-word; /* Permite que el texto largo se divida */
 }
 
 .tabla-procesos tr:nth-child(even) {
