@@ -27,7 +27,7 @@ const Auth = () => {
     const endpoint = isLogin ? "/login" : "/register";
     try {
       const response = await fetch(
-        `https://ef97-177-53-215-61.ngrok-free.app${endpoint}`,
+        `https://dfec-177-53-215-61.ngrok-free.app${endpoint}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

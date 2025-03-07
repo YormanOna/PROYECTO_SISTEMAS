@@ -245,3 +245,68 @@ body {
   background: #357abd;
   transform: translateY(-2px);
 }
+
+/* Estilos para la sección de configuración de intervalos */
+.interval-config {
+  background-color: #f9f9f9; /* Fondo claro para un diseño limpio */
+  border: 1px solid #e0e0e0; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espacio interno */
+  margin-bottom: 30px; /* Espacio inferior */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+  max-width: 600px; /* Ancho máximo */
+  margin-left: auto;
+  margin-right: auto; /* Centrar la sección */
+}
+
+.interval-config h3 {
+  font-size: 1.5rem; /* Tamaño del título */
+  color: #333; /* Color oscuro para contraste */
+  margin-bottom: 20px; /* Espacio inferior */
+  text-align: center; /* Centrar el título */
+}
+
+.interval-config div {
+  display: flex; /* Flexbox para alinear etiqueta e input */
+  align-items: center; /* Centrar verticalmente */
+  margin-bottom: 15px; /* Espacio entre campos */
+}
+
+.interval-config label {
+  font-weight: bold; /* Etiquetas en negrita */
+  color: #555; /* Color gris oscuro */
+  margin-right: 10px; /* Espacio entre etiqueta e input */
+  min-width: 100px; /* Ancho mínimo para alineación */
+  text-align: right; /* Alinear texto a la derecha */
+}
+
+.interval-config input[type="number"] {
+  width: 80px; /* Ancho fijo para inputs */
+  padding: 8px; /* Espacio interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: border-color 0.3s ease; /* Transición para el borde */
+}
+
+.interval-config input[type="number"]:focus {
+  border-color: #4a90e2; /* Color azul al enfocar */
+  outline: none; /* Sin contorno predeterminado */
+}
+
+.interval-config button {
+  background-color: #4a90e2; /* Color azul profesional */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espacio interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.3s ease; /* Transición para el fondo */
+  display: block; /* Hacerlo bloque para centrar */
+  margin: 20px auto 0; /* Centrar el botón */
+}
+
+.interval-config button:hover {
+  background-color: #357abd; /* Azul más oscuro al pasar el ratón */
+}

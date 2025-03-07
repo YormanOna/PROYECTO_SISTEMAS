@@ -17,7 +17,7 @@ const ReportPage = () => {
         setError(null);
         setReportGenerated(false);
 
-        const response = await fetch('https://ef97-177-53-215-61.ngrok-free.app/report', {
+        const response = await fetch('https://dfec-177-53-215-61.ngrok-free.app/report', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
